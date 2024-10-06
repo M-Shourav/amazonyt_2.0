@@ -1,6 +1,6 @@
 import { IoMenu } from "react-icons/io5";
 import Conatiner from "../Conatiner";
-import { navigate } from "@/helper/index";
+import { navigate } from "@/components/constants/index";
 const BottomHeader = () => {
   return (
     <div className="w-full h-10 bg-amazone_light">

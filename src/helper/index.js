@@ -1,7 +1,10 @@
-export const navigate = [
-  { title: "Todays Deals" },
-  { title: "Customer Service" },
-  { title: "Registry" },
-  { title: "Gift Cards" },
-  { title: "Sell" },
-];
+export const getData = async (endpoint) => {
+  const response = await fetch(endpoint, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  const data = await response.json();
+  return data;
+};
