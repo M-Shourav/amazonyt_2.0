@@ -4,6 +4,7 @@ import Image from "next/image";
 import ProductRating from "../ProductRating";
 import PriceFormated from "../PriceFormated";
 import AddToCartButton from "../AddToCartButton";
+import { FaRegHeart } from "react-icons/fa6";
 
 interface Props {
   product: ProductType;
@@ -24,13 +25,18 @@ const ProductCard = ({ product }: Props) => {
             alt="product_Image"
             width={200}
             height={200}
-            className="h-64 w-full object-contain hover:scale-110 duration-200"
+            className="h-64 w-full object-contain hover:scale-110 duration-200 mt-10"
           />
         </Link>
         {/* description part */}
         <div className="flex flex-col gap-3">
-          <div className=" absolute top-2 right-2 border border-gray-400 px-4 rounded-full">
-            <p>{product?.discountPercentage}%</p>
+          <div className="flex items-center gap-4 absolute top-2 right-3">
+            <p className="px-6 rounded-full border border-gray-500">
+              {product?.discountPercentage}%
+            </p>
+            <span className="text-xl">
+              <FaRegHeart />
+            </span>
           </div>
           <div className="flex items-center justify-between">
             <p className="text-sm font-semibold tracking-wide text-gray-600">
